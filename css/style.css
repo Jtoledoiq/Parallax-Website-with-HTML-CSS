@@ -8,18 +8,84 @@ body, html {
   color:#666;
 }
 
+.pimg1, .pimg2, .pimg3{
+  position: relative;
+  opacity: 0.70;
+
+  /*THIS IS THE PARALLAX EFECT*/
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+                        /*
+                        fixed=Parallax;
+                        scroll=normal;
+                        */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 .pimg1 {
   background-image: url('../img/image1.jpg');
   min-height: 100%;
+
+
+
 }
+
+
+.ptext {
+  z-index: 1;
+text-transform: uppercase;
+  color:#000;
+  font-size: 20px;
+  letter-spacing: 6px;
+
+}
+
 
 .pimg2 {
   background-image: url('../img/image2.jpg');
-  min-height: 100%;
+  min-height: 400px;
 }
 
 .pimg3 {
   background-image: url('../img/image3.jpg');
-  min-height: 100%;
+  min-height: 400px ;
+}
+
+.section {
+  text-align:center;
+  padding:50px 80px;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color:#666;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color:#ddd;
+}
+
+.ptext .border {
+  background-color: rgb(38, 38,38, 0.9);
+  color:rgb(242, 242, 242)	;
+  padding:20px;
+}
+
+.ptext .border.trans {
+  background-color: transparent;
+}
+
+@media(max-width:568px) {
+    .pimg1, .pimg2, .pimg3{
+      background-attachment: scroll;
+    }
 }
